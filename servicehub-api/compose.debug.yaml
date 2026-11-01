@@ -1,0 +1,6 @@
+services:
+  servicehubapi:
+    image: servicehubapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile

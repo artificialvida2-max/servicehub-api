@@ -1,0 +1,6 @@
+package com.servicehub.model;
+
+public enum ServiceCategory {
+    SERVICOS_GERAIS, ENCANADOR, ELETRICISTA, PINTOR, LIMPEZA,
+    JARDINAGEM, MARCENEIRO, TECNOLOGIA_DA_INFORMACAO, OUTROS
+}

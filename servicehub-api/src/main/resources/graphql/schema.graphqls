@@ -1,0 +1,48 @@
+type Provider {
+    id: ID!
+    name: String!
+    email: String!
+    phone: String
+}
+
+type ServiceOffering {
+    id: ID!
+    title: String!
+    description: String
+    price: Float!
+    category: String!
+    provider: Provider!
+}
+
+type Contract {
+    id: ID!
+    provider: Provider!
+    client: Client!
+    serviceCategory: String!
+    startDate: String
+    endDate: String
+    description: String
+}
+
+type Client {
+    id: ID!
+    name: String!
+    email: String!
+    phone: String
+}
+
+type Query {
+    provider(id: ID!): Provider
+    providers(specialty: String, available: Boolean): [Provider!]!
+    contracts: [Contract!]!
+}
+
+type Mutation {
+    createProvider(input: ProviderInput!): Provider!
+}
+
+input ProviderInput {
+    name: String!
+    email: String!
+    phone: String
+}
